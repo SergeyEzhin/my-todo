@@ -1,0 +1,19 @@
+#addTodo {
+  position: fixed;
+  bottom: 40px;
+  cursor: pointer;
+  border: 0;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
