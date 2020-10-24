@@ -1,0 +1,15 @@
+.main {
+  position: relative;
+  &__content {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0.18px;
+    text-align: left;
+    color: #000000;
+    font-family: "Gilroy Medium";
+  }
+}

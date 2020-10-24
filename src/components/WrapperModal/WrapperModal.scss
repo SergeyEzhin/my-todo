@@ -1,0 +1,38 @@
+.wrapper-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  transition: .5s;
+  z-index: -1;
+  background-color: transparent;
+  transform: translateY(100%);
+}
+
+// .wrapper-enter {
+//   z-index: 5;
+// }
+
+.wrapper-enter-active, .wrapper-enter-done {
+  transform: translateY(0);
+  z-index: 5;
+}
+
+.wrapper-exit-done {
+  z-index: -1;
+}
+
+
+// .wrapper-exit {
+//   z-index: -1;
+// }
+
+// .wrapper-exit-active {
+//   transform: translateY(100%);
+// }
+
+
+
