@@ -17,3 +17,9 @@
     height: auto;
   }
 }
+
+@media (min-width: 550px) {
+  .add-todo {
+    left: 40px;
+  }
+}

@@ -13,3 +13,16 @@
     font-family: "Gilroy Medium";
   }
 }
+
+.list-todo {
+  &__elem {
+    display: flex;
+    margin-bottom: 31px;
+  }
+  &__elem:last-child {
+    margin-bottom: 0;
+  }
+  &__name {
+    margin-left: 14px;
+  }
+}

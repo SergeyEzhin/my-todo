@@ -79,8 +79,7 @@ ul {
 
 button,
 input,
-textarea
-a {
+textarea a {
   outline: none !important;
 }
 
@@ -162,6 +161,7 @@ textarea::placeholder {
   border-radius: 10px;
   cursor: pointer;
   border: 0;
+  width: 46.5%;
   padding: 9px 32px;
   display: flex;
   justify-content: center;
@@ -181,5 +181,35 @@ textarea::placeholder {
   &__close {
     background-color: #f2f2f2;
     color: #4d4d4d;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn {
+    width: 100%;
+  }
+  .modal__buttons {
+    flex-direction: column;
+    button:last-child {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .modal__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    button:last-child {
+      margin-top: 15px;
+    }
+  }
+  .btn {
+    width: 137px;
+  }
+  .modal {
+    max-width: 550px;
+    width: 550px;
+    left: calc(50% - 275px);
   }
 }

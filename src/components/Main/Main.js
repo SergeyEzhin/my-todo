@@ -1,23 +1,26 @@
 import React from "react";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
+import { Radio } from "../../ui/Radio/Radio";
 import "./Main.scss";
 
 export const Main = () => {
+  let todos = useSelector((state) => state.data.data);
 
-  let data = useSelector(state => state.data.data);
- 
   return (
     <div className="main">
       <div className="main__content">
-        {data.length 
-          ? data.map(todo => (
-              <p>{todo}</p>
+        <ul className="list-todo">
+          {todos.length ? (
+            todos.map((todo, index) => (
+              <li className="list-todo__elem" key={index}>
+                <Radio id={index} text={todo} />
+              </li>
             ))
-          : <p>Список задач пуст</p>
-        }
+          ) : (
+            <p>Список задач пуст</p>
+          )}
+        </ul>
       </div>
     </div>
-  )
-   
-}
-
+  );
+};

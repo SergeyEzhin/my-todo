@@ -1,25 +1,22 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { WrapperModal } from "../WrapperModal/WrapperModal";
-import { useDispatch } from 'react-redux';
-import { switchAddMode, addTodo } from '../../redux/actions';
+import { useDispatch } from "react-redux";
+import { switchAddMode, addTodo } from "../../redux/actions";
 
 export const ModalAdd = () => {
-
   const dispatch = useDispatch();
-  const [todo, setTodo] = useState('');
-
-  // function checkValue(e)
-  // {
-  //   return e.target.value
-  // }
+  const [todo, setTodo] = useState("");
 
   function closeModal() {
-    dispatch(switchAddMode())
+    dispatch(switchAddMode());
   }
 
-  function addTodo() {
-    console.log(todo);
-    dispatch(addTodo(todo));
+  function addNewTodo() {
+    if (todo.trim()) {
+      console.log(todo);
+      dispatch(addTodo(todo));
+      dispatch(switchAddMode());
+    }
   }
 
   return (
@@ -31,14 +28,22 @@ export const ModalAdd = () => {
               name="name-todo"
               id="name-todo"
               placeholder="Введите текст задачи"
-              onChange={event => setTodo(event.target.value)}
+              onChange={(event) => setTodo(event.target.value)}
             ></textarea>
           </div>
           <div className="modal__buttons">
-            <button type="button" className="btn btn__change" onClick={closeModal}>
+            <button
+              type="button"
+              className="btn btn__close"
+              onClick={closeModal}
+            >
               Закрыть
             </button>
-            <button type="button" className="btn btn__close" onClick={addTodo}>
+            <button
+              type="button"
+              className="btn btn__change"
+              onClick={addNewTodo}
+            >
               Добавить
             </button>
           </div>

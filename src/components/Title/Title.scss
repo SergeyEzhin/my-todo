@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (min-width: 550px) {
+  .title {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
